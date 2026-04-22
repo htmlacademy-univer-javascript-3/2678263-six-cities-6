@@ -54,6 +54,7 @@ export default function LoginPage() {
               action="#"
               method="post"
               onSubmit={handleSubmit}
+              data-testid="login-form"
             >
               <div className="login__input-wrapper form__input-wrapper">
                 <label className="visually-hidden">E-mail</label>
@@ -63,6 +64,7 @@ export default function LoginPage() {
                   name="email"
                   placeholder="Email"
                   required
+                  data-testid="login-email"
                 />
               </div>
 
@@ -74,12 +76,14 @@ export default function LoginPage() {
                   name="password"
                   placeholder="Password"
                   required
+                  data-testid="login-password"
                 />
               </div>
 
               <button
                 className="login__submit form__submit button"
                 type="submit"
+                data-testid="login-submit"
               >
                 Sign in
               </button>

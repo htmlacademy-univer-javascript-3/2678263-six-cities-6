@@ -23,6 +23,7 @@ export default function PlacesSorting({
 
       <span
         className="places__sorting-type"
+        data-testid="sorting-current"
         tabIndex={0}
         onClick={() => setIsOpen(!isOpen)}
       >
@@ -33,6 +34,7 @@ export default function PlacesSorting({
       </span>
 
       <ul
+        data-testid="sorting-options"
         className={`places__options places__options--custom ${
           isOpen ? 'places__options--opened' : ''
         }`}
@@ -40,6 +42,7 @@ export default function PlacesSorting({
         {SORT_OPTIONS.map((option) => (
           <li
             key={SORT[option]}
+            data-testid={`sorting-option-${option}`}
             className={`places__option ${
               option === activeSort ? 'places__option--active' : ''
             }`}

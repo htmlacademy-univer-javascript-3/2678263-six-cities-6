@@ -34,6 +34,7 @@ export default function OfferItem({
       onMouseLeave={() => {
         onOfferItemLeave?.();
       }}
+      data-testid="offer-item"
     >
       {isPremium && (
         <div className="place-card__mark">
